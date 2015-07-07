@@ -1,0 +1,109 @@
+.active{
+  background: #0875BD;
+}
+
+.main-nav {
+  background: #001C2A;
+  box-shadow: 0 5px 5px rgba(0,0,0, .4);
+  z-index: 150;
+  margin-bottom: -64px;
+  
+}
+
+
+.nav-wrapper {
+  padding-left: 20px;
+}
+
+.brand-logo {
+  font-weight: bold;
+}
+
+
+.jumbotron {
+  background-image: url('http://hdwyn.com/wallpaper_3840x1080/line_background_band_shadow_surface_dual_3840x1080_hd-wallpaper-48626.jpg');
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;    
+  overflow: hidden;
+  padding: 80px 50px 50px;
+  
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size:72px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 24px;
+  color: #fff;
+}
+
+#about {
+  background: #efefef;
+  border-bottom: 2px solid #dbdbdb;
+}
+
+#about img{
+  width: 100%;
+}
+
+#about p{
+  font-size: 18px; 
+  font-weight: bold;
+}
+
+#projects {
+  overflow: hidden;
+  border-bottom: 2px solid #dbdbdb;
+  font-weight: bold;
+}
+
+#projects img{
+  width: 100%;
+/*
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+*/
+}
+
+
+
+
+
+
+#resume {
+  padding-bottom: 100px;
+  background: #efefef;
+}
+
+
+
+
+
+footer {
+  overflow: hidden
+}
+
+.footer-text {
+  padding-left: 20px;
+}
+
+.contact-me {
+  padding-right: 20px;
+}
+
+
+.bottom{
+  height: 100px; 
+}
+
