@@ -65,9 +65,9 @@ function add() {
 
 
 var main = function(){
-//  setInterval(blinkCursor, 1000);
+  setInterval(blinkCursor, 1000);
   NOUN = $('#noun');
-//  setTimeout('deleteNoun()', 2500);
+  setTimeout('deleteNoun()', 2500);
   
 
 
