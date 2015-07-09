@@ -21,7 +21,7 @@
 
 
 .jumbotron {
-  background-image: url('http://hdwyn.com/wallpaper_3840x1080/line_background_band_shadow_surface_dual_3840x1080_hd-wallpaper-48626.jpg');
+  background-image: url(mainPagePics/background.jpg);
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;    
