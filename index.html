@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="main.css">
     <title>Daniel Kou</title>
@@ -22,7 +20,6 @@
       </nav>
     </div>
 
-    
     <div id="home" class="jumbotron scrollspy">
       <div class="container">
         <h1>I am a 
@@ -33,121 +30,106 @@
       </div>
     </div>
 
-
-
-      
-      <div id="about" class="section scrollspy">
-        <div class="container">
-          <h2>About Me</h2>
-          <div class="row">
-            <div class="col s4">
-              <div class="thumbnail">
-                <img id="pic" src="mainPagePics/profile.png"></img>
-              </div>
+    <div id="about" class="section scrollspy">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="row">
+          <div class="col s4">
+            <div class="thumbnail">
+              <img id="pic" src="mainPagePics/profile.jpg">
             </div>
+          </div>
 
-            <div class="text col s8">
-			<p>I am Daniel Kou, a Computer Science major studying at the University of Waterloo, Class of 2019.</p>
-              <p>I have a strong base in imperative and object oriented programming in addition to experience with mobile and web development. I am a passionate and quick learner with interests in cyber security, big data, and machine learning. 
-              </p>
+          <div class="text col s8">
+            <p>I am Daniel Kou, a Computer Science major studying at the University of Waterloo, Class of 2019.</p>
+              <p>I have a strong base in imperative and object oriented programming in addition to experience with mobile and web development. I am a passionate and quick learner with interests in cyber security, big data, and machine learning.</p>
             </div>
           </div> 
         </div>
       </div>
 
-
-
-
-
-
     <div id="projects" class="section scrollspy">
 	  <div class="container">
         <h2>Projects</h2>
         
-        <!-- HR GUI -->
-        <div class="row">
-            <div class="col s2">
-              <div class="thumbnail">
-                <img id="pic" src="mainPagePics/temp.jpg"></img>
+        <ul class="collapsible popout" data-collapsible="expandable">
+          <li>
+            <div class="collapsible-header active">Crappy Bird</div>
+            <div class="collapsible-body">
+              <div class="text-left">
+                <p>iOS application built using SpriteBuilder and Cocos2D in Swift. This application simulates Flappy Bird and was my first exposure to 2D side-scrollers.</p>
+              </div>
+              <div class="proj-pic-right">
+                <img id="bird" src="mainPagePics/crap_bird.jpg">
               </div>
             </div>
-
-            <div class="text col s10 HR">
-              <h5>HR GUI</h5>
-              <p>Implemented using Java's Swing library properties to create a password encrypted HR database application. Features searching and sorting capabilities to process several thousand data points</p>
-            </div>
-          </div> 
-      
-        <!-- Crappy Bird -->
-        <div class="row">
-          <div class="text col s10">
-            <h5>Crappy Bird</h5>
-            <p>iOS application built using SpriteBuilder and Cocos2D in Swift. This application simulates Flappy Bird and was my first exposure to 2D side-scrollers.</p>
-          </div>
- 
-          <div class="col s2">
-              <div class="thumbnail">
-                <img id="pic" src="mainPagePics/temp.jpg"></img>
-              </div>
-            </div>
-        </div> 
-		
+          </li>
   
-    <!-- Whack A Mole -->
-        <div class="row">
-            <div class="col s2">
-              <div class="thumbnail">
-                <img id="pic" src="mainPagePics/temp.jpg"></img>
+          <li>
+            <div class="collapsible-header">JavaScript Snake</div>
+            <div class="collapsible-body">
+              <div class="proj-pic-left">
+                <img src="mainPagePics/temp.jpg">
+              </div>
+        
+              <div class="text-right">
+                <p>Javascript application that implements a multiplayer mode to the traditional snake game, in addition to a challenging and interesting twist. Real-time event based communication through use of websockets to come; currently under work.</p>
               </div>
             </div>
-
-            <div class="text col s10 HR">
-              <h5>HR GUI</h5>
-              <p>Implemented using Java's Swing library properties to create a password encrypted HR database application. Features searching and sorting capabilities to process several thousand data points</p>
+          </li>
+  
+          <li>
+            <div class="collapsible-header">Whack A Mole</div>
+            <div class="collapsible-body">
+              <div class="text-left">
+                <p>Android applicaton built in Eclipse that simulates arcade Whack A Mole game. Keeps track of highscores and offers 3 different difficulties.</p>
+              </div>
+        
+              <div class="proj-pic-right">
+                <img src="mainPagePics/temp.jpg">
+              </div>
             </div>
-          </div> 
-      
-      
-      
-      
-	  </div>
-	</div>
+          </li>
+  
+          <li>
+            <div class="collapsible-header">Christmasify</div>
+            <div class="collapsible-body">
+              <p>Google Chrome extension build to "christmasify" any webpage. Animates snowflakes falling from top of screen. Considering other webpage add-ons for the future, such as rain, fireworks, and frost.</p>
+            </div>
+          </li>
+  
+          <li>
+            <div class="collapsible-header">HR GUI</div>
+            <div class="collapsible-body"><p>Implemented using Java's Swing library properties to create a password encrypted HR database application. Features searching and sorting capabilities to process several thousand data points</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
     
     <div id="resume" class="section scrollspy">
       <div class="container">
         <h2>Resume</h2>
-          <div class="collection">
-            <p class="collection-item">Thing1</p>
-            <p class="collection-item">Thing2</p>
-            <p class="collection-item">Thing3</p>
-            <p class="collection-item">Thing4</p>
-          </div>
+        <img class="materialboxed" data-caption="Last updated: May 15, 2015" width="150" src="mainPagePics/resume.jpg">  
+        <p>Last updated: May 15, 2015</p>
       </div>
     </div>
 
-  
-  <div class="section bottom">
-
-  </div>
-    
-    
-    
+    <div class="section bottom">
+    </div>  
     
     <footer class="page-footer blue darken-4">
       <div class="footer-text grey-text">
         © Made by Daniel Kou
         <span class="contact-me right">
-          <a href="https://www.facebook.com/mengbo.kou"><i><img src="mainPagePics/facebook.png"></img></i></a>
-          <a href="https://github.com/DanielKou"><i><img src="mainPagePics/github.png"></img></i></a>
-          <a href="https://ca.linkedin.com/pub/daniel-kou/a2/412/7a2"><i><img src="mainPagePics/linkedin.png"></img></i></a>
+          <a href="https://www.facebook.com/mengbo.kou"><i><img src="mainPagePics/facebook.png"></i></a>
+          <a href="https://github.com/DanielKou"><i><img src="mainPagePics/github.png"></i></a>
+          <a href="https://ca.linkedin.com/pub/daniel-kou/a2/412/7a2"><i><img src="mainPagePics/linkedin.png"></i></a>
         </span>
       </div>
-      
     </footer>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="mainPage.js"></script>
-      
   </body>
 </html>

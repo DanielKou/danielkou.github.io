@@ -9,19 +9,17 @@ function blinkCursor() {
   $('#cursor').animate({
     opacity: 0}, 'fast', 'swing').delay(200).animate({
       opacity: 1}, 'fast' , 'swing');
-  
 }
 
 function deleteNoun(){
   caption = NOUN.text();
   captionLength = caption.length;
-  
   erase();
 }
 
 function erase(){
   NOUN.text(caption.substr(0, captionLength--));
-  
+
   if (captionLength >= 0){
     setTimeout('erase()', 150);
   }
@@ -30,7 +28,6 @@ function erase(){
     caption = '';
     setTimeout('addNoun()', 100);
   }
-            
 }
 
 function addNoun(){
@@ -44,14 +41,13 @@ function addNoun(){
                'hard worker',
                'team player'];
   var rand = Math.floor((Math.random() * 100) % 9);
-  
   caption = words[rand];
   add();
 }
 
-function add() {
+function add(){
   NOUN.text(caption.substr(0, captionLength++));
-  
+
   if (captionLength <= caption.length){
     setTimeout('add()', 150);
   }
@@ -60,26 +56,18 @@ function add() {
     captionLength = 0;
     setTimeout('deleteNoun()', 2500);
   }
-  
 }
-
 
 var main = function(){
   setInterval(blinkCursor, 1000);
   NOUN = $('#noun');
   setTimeout('deleteNoun()', 2500);
   
-
-
-  
   $('.scrollspy').scrollSpy();
-  
-  
-
+  $('.collapsible').collapsible({
+      accordion : false
+    });
+  $('.materialboxed').materialbox();
 };
 
-
-
-
 $(document).ready(main);
-
