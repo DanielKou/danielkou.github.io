@@ -62,6 +62,21 @@ body{
   font-weight: bold;
 }
 
+.profile-pic{
+  position: relative;
+  float: left;
+}
+
+.glasses{
+  position: absolute;
+  padding-left: 40%;
+  padding-top: 24.5%;
+  width: 55%;
+  pointer-events: none;
+}
+
+
+
 #projects {
   overflow: hidden;
   border-bottom: 2px solid #dbdbdb;

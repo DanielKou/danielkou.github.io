@@ -58,7 +58,38 @@ function add(){
   }
 }
 
+function playSound(){
+  $("#sound").html(
+    "<audio autoplay='autoplay'>" +
+    "<source src='assets/EasterEggs/audio.mp3' type='audio/mpeg'>" +
+    "<embed hidden='true' autostart='true' loop='false' src='assets/EasterEggs/audio.mp3'>" +
+    "</audio>"
+    );
+}
+
+function spinGlasses(){
+  // $("#thuglife").animate({
+  //   -webkit-transform:'rotate(360deg)'); 
+  //   -moz-transform:'rotate(360deg)');
+  //   transform: 'rotate(360deg)');
+  // }, 1000);
+
+$('#thuglife').animate({  textIndent: 0 }, {
+    step: function(now,fx) {
+      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+    },
+    duration:'fast'
+},'linear');
+
+}
+
+
+
+
+
+
 var main = function(){
+  spinGlasses();
   setInterval(blinkCursor, 1000);
   NOUN = $('#noun');
   setTimeout('deleteNoun()', 2500);
@@ -68,6 +99,29 @@ var main = function(){
       accordion : false
     });
   $('.materialboxed').materialbox();
+
+
+  $("#profile-pict").click(function(){
+    playSound();
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
 
 $(document).ready(main);
