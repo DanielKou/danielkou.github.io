@@ -73,13 +73,14 @@ body{
   padding-top: 24.5%;
   width: 55%;
   pointer-events: none;
-  opacity: 1;
+
+  z-index: 10;
 }
 
 .thuglife{
-  -webkit-transition:all 5000ms;
-  -moz-transition:all 5000ms;
-  transition:all 5000ms;
+  -webkit-transition: -webkit-transform 5000ms;
+  -moz-transition: -moz-transform 5000ms;
+  transition: transform 5000ms;
 }
 
 #projects {

@@ -59,6 +59,7 @@ function add(){
 }
 
 function playSound(){
+  $(".thuglife").css("visibility", "visible");
   $("#sound").html(
     "<audio autoplay='autoplay'>" +
     "<source src='assets/EasterEggs/audio.mp3' type='audio/mpeg'>" +
@@ -67,6 +68,9 @@ function playSound(){
     );
 
  spinGlasses();
+ setTimeout(function(){
+  $(".thuglife").css({"visibility" : "hidden"})
+ }, 10500);
   
 }
 
@@ -86,9 +90,16 @@ function spinGlasses(){
 
 
 
-
+var clickCount = 0;
+var eeCount = 8;
 
 var main = function(){
+  $(".thuglife").css("visibility", "hidden");
+  var text = $("#resume").position().top;
+
+  setTimeout(function(){
+    $(window).scrollTop(text);
+  }, 1000);
 
   setInterval(blinkCursor, 1000);
   NOUN = $('#noun');
@@ -102,7 +113,12 @@ var main = function(){
 
 
   $("#profile-pict").click(function(){
-    playSound();
+    clickCount++;
+
+    if (clickCount == eeCount){
+      playSound();
+      clickCount = 0;
+    }
   });
 
 
