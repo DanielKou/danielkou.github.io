@@ -65,21 +65,21 @@ function playSound(){
     "<embed hidden='true' autostart='true' loop='false' src='assets/EasterEggs/audio.mp3'>" +
     "</audio>"
     );
+
+ spinGlasses();
+  
 }
 
 function spinGlasses(){
-  // $("#thuglife").animate({
-  //   -webkit-transform:'rotate(360deg)'); 
-  //   -moz-transform:'rotate(360deg)');
-  //   transform: 'rotate(360deg)');
-  // }, 1000);
+  var str = "rotate(1440deg)";
 
-$('#thuglife').animate({  textIndent: 0 }, {
-    step: function(now,fx) {
-      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
-    },
-    duration:'fast'
-},'linear');
+  $(".thuglife").css({
+    "-webkit-transform" : str,
+    "-moz-transform" : str,
+    "-ms-transform" : str,
+    "transform" : str
+  });
+
 
 }
 
@@ -89,7 +89,7 @@ $('#thuglife').animate({  textIndent: 0 }, {
 
 
 var main = function(){
-  spinGlasses();
+
   setInterval(blinkCursor, 1000);
   NOUN = $('#noun');
   setTimeout('deleteNoun()', 2500);
