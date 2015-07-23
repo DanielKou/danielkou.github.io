@@ -73,6 +73,7 @@ body{
   padding-top: 24.5%;
   width: 55%;
   pointer-events: none;
+  opacity: 0;
 }
 
 
