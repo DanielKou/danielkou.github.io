@@ -58,7 +58,10 @@ function add(){
   }
 }
 
+var clickTimer;
+
 function playSound(){
+  clearTimeout(clickTimer);
   $(".thuglife").css("visibility", "visible");
   $("#sound").html(
     "<audio autoplay='autoplay'>" +
@@ -66,16 +69,16 @@ function playSound(){
     "<embed hidden='true' autostart='true' loop='false' src='assets/EasterEggs/audio.mp3'>" +
     "</audio>"
     );
-
- spinGlasses();
- setTimeout(function(){
-  $(".thuglife").css({"visibility" : "hidden"})
- }, 10500);
-  
+  spinGlasses();
+  clickTimer = setTimeout(function(){
+    $(".thuglife").css({"visibility" : "hidden"})
+  }, 10500);
 }
 
+var deg = 0;
 function spinGlasses(){
-  var str = "rotate(1440deg)";
+  deg += 1440;
+  var str = "rotate(" + deg + "deg)";
 
   $(".thuglife").css({
     "-webkit-transform" : str,
@@ -93,14 +96,10 @@ function spinGlasses(){
 var clickCount = 0;
 var eeCount = 8;
 
+var text = $("#resume").position().top;
+
+
 var main = function(){
-  $(".thuglife").css("visibility", "hidden");
-  var text = $("#resume").position().top;
-
-  setTimeout(function(){
-    $(window).scrollTop(text);
-  }, 1000);
-
   setInterval(blinkCursor, 1000);
   NOUN = $('#noun');
   setTimeout('deleteNoun()', 2500);
@@ -111,33 +110,72 @@ var main = function(){
     });
   $('.materialboxed').materialbox();
 
-
   $("#profile-pict").click(function(){
     clickCount++;
-
     if (clickCount == eeCount){
       playSound();
       clickCount = 0;
     }
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  $(".resizer").click(function(){
+    setTimeout(function(){
+      text = $("#resume").position().top;}, 300);
+  });
+  
+  if($(window).scrollTop() > text - 200){
+    $(".nav-projects").removeClass("active");
+  }
 };
 
+
+$(window).scroll(function(){
+  var cur = $(this).scrollTop();
+  var about = $(".jumbotron").height();
+  var proj = about + $("#about").height();
+  var res = proj + $("#projects").height() - 200;
+  
+  //improved materialize scrollspy
+  if(cur < about){
+     $(".nav-about").removeClass("active-new");
+  }
+  else if(cur > about && cur < proj){
+    $(".nav-about").addClass("active-new");
+    $(".nav-project").removeClass("active-new");
+  }
+  else if(cur > proj && cur < res){
+    $(".nav-about").removeClass("active-new");
+    $(".nav-resume").removeClass("active-new");
+    $(".nav-project").addClass("active-new");
+  }
+  else if(cur > res){
+    $(".nav-project").removeClass("active-new");
+    $(".nav-resume").addClass("active-new");
+  }
+});
+
 $(document).ready(main);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

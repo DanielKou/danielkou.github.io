@@ -2,7 +2,7 @@ body{
   background: #efefef;
 }
 
-.navbar-fixed .active{
+.active-new{
   background: #0875BD;
 }
 
@@ -70,7 +70,7 @@ body{
 .glasses{
   position: absolute;
   padding-left: 40%;
-  padding-top: 24.5%;
+  padding-top: 25.5%;
   width: 55%;
   pointer-events: none;
 
@@ -78,6 +78,7 @@ body{
 }
 
 .thuglife{
+  visibility: hidden;
   -webkit-transition: -webkit-transform 5000ms;
   -moz-transition: -moz-transform 5000ms;
   transition: transform 5000ms;
@@ -118,8 +119,8 @@ body{
    height: 300px; 
 }
 
-#resume {
-  padding-bottom: 100px;
+#resume img {
+  margin-left: 3%;
 }
 
 .bottom{
@@ -137,3 +138,4 @@ footer {
 .contact-me {
   padding-right: 20px;
 }
+

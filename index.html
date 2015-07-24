@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection"/>
     <link rel="stylesheet" href="assets/main.css">
     <title>Daniel Kou</title>
   </head>
@@ -15,9 +15,9 @@
         <div class="nav-wrapper blue darken-4">
           <a href="#" class="brand-logo">Daniel Kou</a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li> 
+            <li class="nav-about"><a href="#about">About Me</a></li>
+            <li class="nav-project"><a href="#projects">Projects</a></li>
+            <li class="nav-resume"><a href="#resume">Resume</a></li> 
           </ul>
         </div>
       </nav>
@@ -61,7 +61,7 @@
         
         <ul class="collapsible popout" data-collapsible="expandable">
           <li>
-            <div class="collapsible-header active">Crappy Bird</div>
+            <div class="collapsible-header active resizer">Crappy Bird</div>
             <div class="collapsible-body">
               <div class="text-left">
                 <p>iOS application built using SpriteBuilder and Cocos2D in Swift. This application simulates Flappy Bird and was my first exposure to 2D side-scrollers.</p>
@@ -73,7 +73,7 @@
           </li>
   
           <li>
-            <div class="collapsible-header">JavaScript Snake</div>
+            <div class="collapsible-header resizer">JavaScript Snake</div>
             <div class="collapsible-body">
               <div class="proj-pic-left">
                 <img src="assets/mainPagePics/temp.jpg">
@@ -86,7 +86,7 @@
           </li>
   
           <li>
-            <div class="collapsible-header">Whack A Mole</div>
+            <div class="collapsible-header resizer">Whack A Mole</div>
             <div class="collapsible-body">
               <div class="text-left">
                 <p>Android applicaton built in Eclipse that simulates arcade Whack A Mole game. Keeps track of highscores and offers 3 different difficulties.</p>
@@ -99,14 +99,14 @@
           </li>
   
           <li>
-            <div class="collapsible-header">Christmasify</div>
+            <div class="collapsible-header resizer">Christmasify</div>
             <div class="collapsible-body">
               <p>Google Chrome extension build to "christmasify" any webpage. Animates snowflakes falling from top of screen. Considering other webpage add-ons for the future, such as rain, fireworks, and frost.</p>
             </div>
           </li>
   
           <li>
-            <div class="collapsible-header">HR GUI</div>
+            <div class="collapsible-header resizer">HR GUI</div>
             <div class="collapsible-body"><p>Implemented using Java's Swing library properties to create a password encrypted HR database application. Features searching and sorting capabilities to process several thousand data points</p></div>
           </li>
         </ul>
@@ -121,8 +121,10 @@
       </div>
     </div>
 
+<!--
     <div class="section bottom">
     </div>  
+-->
     
     <footer class="page-footer blue darken-4">
       <div class="footer-text grey-text">
