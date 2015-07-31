@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="assets/main.css">
     <link rel="shortcut icon" href="assets/mainPagePics/icon.ico"/>
     <title>Daniel Kou</title>
+    <meta name="description" 
+          content="I am Daniel Kou, a University of Waterloo student pursuing a Computer Science major. This is my personal website built using Bootstraps and jQuery to showcase my skills and projects.">
   </head>
 
   <body>
@@ -12,17 +14,17 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper blue darken-4">
-          <a href="#" class="brand-logo">Daniel Kou</a>
+          <a class="brand-logo click">Daniel Kou</a>
           <ul class="right hide-on-med-and-down">
-            <li class="nav-about"><a href="#about">About Me</a></li>
-            <li class="nav-project"><a href="#projects">Projects</a></li>
-            <li class="nav-resume"><a href="#resume">Resume</a></li> 
+            <li class="nav-about click"><a>About Me</a></li>
+            <li class="nav-project click"><a>Projects</a></li>
+            <li class="nav-resume click"><a>Resume</a></li> 
           </ul>
         </div>
       </nav>
     </div>
 
-    <div id="home" class="jumbotron scrollspy">
+    <div id="home" class="jumbotron">
       <div class="container">
         <h1>I am a 
           <span id='noun'>programmer</span><span id="cursor">|</span>
@@ -31,7 +33,7 @@
       </div>
     </div>
 
-    <div id="about" class="section scrollspy">
+    <div id="about" class="section">
       <div class="container">
         <h2>About Me</h2>
         <div class="row">
@@ -53,12 +55,12 @@
         </div>
       </div>
 
-    <div id="projects" class="section scrollspy">
+    <div id="projects" class="section">
 	  <div class="container">
         <h2>Projects</h2>
         <ul class="collapsible popout" data-collapsible="accordion">
           <li>
-            <div class="collapsible-header active resizer">Crappy Bird – iOS Application</div>
+            <div class="collapsible-header active">Crappy Bird – iOS Application</div>
             <div class="collapsible-body">
               <div class="text-left">
                 <p>iOS application built using SpriteBuilder and Cocos2D in Swift. This application simulates Flappy Bird and was my first exposure to 2D side-scrollers.</p>
@@ -72,7 +74,7 @@
           </li>
   
           <li>
-            <div class="collapsible-header resizer">Single & Multiplayer Snake - Javascript Application</div>
+            <div class="collapsible-header">Single & Multiplayer Snake - Javascript Application</div>
             <div class="collapsible-body">
               <div class="proj-pic-left">
                 <a href="https://github.com/DanielKou/JS-Snake" target="_blank">
@@ -88,7 +90,7 @@
           </li>
   
           <li>
-            <div class="collapsible-header resizer">Whack A Mole - Android Application</div>
+            <div class="collapsible-header">Whack A Mole - Android Application</div>
             <div class="collapsible-body">
               <div class="text-left">
                 <p>Android applicaton built in Eclipse that simulates arcade Whack A Mole game. Keeps track of highscores and offers 3 different difficulties.</p>
@@ -103,7 +105,7 @@
           </li>
   
           <li>
-            <div class="collapsible-header resizer">Christmasify - Google Chrome Extension</div>
+            <div class="collapsible-header">Christmasify - Google Chrome Extension</div>
             <div class="collapsible-body">
               <p>Google Chrome extension build to "christmasify" any webpage. Animates snowflakes falling from top of screen. Considering adding other webpage animations for the future, eg. rain, fireworks, and frost.</p>
               <p><a href="https://chrome.google.com/webstore/detail/christmasify/pbbeeccjhaaheibijoanebhllhbcgagc" target="_blank">Check it out  >></a></p>
@@ -111,7 +113,7 @@
           </li>
   
           <li>
-            <div class="collapsible-header resizer">HR GUI - Java Swing Application</div>
+            <div class="collapsible-header">HR GUI - Java Swing Application</div>
             <div class="collapsible-body">
               <p>Implemented using Java's Swing library properties to create a password encrypted HR database application. Features searching and sorting capabilities to process several thousand data points</p>
             </div>
@@ -120,7 +122,7 @@
       </div>
     </div>
     
-    <div id="resume" class="section scrollspy">
+    <div id="resume" class="section">
       <div class="container">
         <h2>Resume</h2>
         <img class="materialboxed" data-caption="Last updated: May 15, 2015" width="150" src="assets/mainPagePics/resume.jpg">  

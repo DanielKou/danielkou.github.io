@@ -83,12 +83,12 @@ function spinGlasses(){
 var clickCount = 0;
 var eeCount = 2;
 
+
 var main = function(){
   setInterval(blinkCursor, 1000);
   NOUN = $('#noun');
   setTimeout(deleteNoun, 2500);
   
-  $('.scrollspy').scrollSpy();
   $('.collapsible').collapsible();
   $('.materialboxed').materialbox();
 
@@ -99,6 +99,20 @@ var main = function(){
       clickCount = 0;
     }
   });
+  
+  $(".brand-logo").click(function(){
+    $("html, body").animate({ scrollTop: $("#sound").offset().top - $(".navbar-fixed").height()}, 500);
+  });
+  $(".nav-about").click(function(){
+    $("html, body").animate({ scrollTop: $("#about").offset().top - $(".navbar-fixed").height()}, 500);
+  });
+  $(".nav-project").on("click",function(){
+    $("html, body").animate({ scrollTop: $("#projects").offset().top - $(".navbar-fixed").height()}, 500);
+  });
+  $(".nav-resume").on("click",function(){
+    $("html, body").animate({ scrollTop: $("#resume").offset().top -$(".navbar-fixed").height()}, 500);
+  });
+  
 };
 
 $(window).scroll(function(){

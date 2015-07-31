@@ -6,8 +6,11 @@ body{
   background: #0875BD;
 }
 
+.nav-wrapper active{
+  background: #000000;
+}
+
 .main-nav {
-  background: #001C2A;
   box-shadow: 0 5px 5px rgba(0,0,0, .4);
   z-index: 150;
   margin-bottom: -64px;
@@ -15,6 +18,10 @@ body{
 
 .nav-wrapper {
   padding-left: 20px;
+}
+
+.click{
+  cursor: pointer;
 }
 
 .brand-logo {
