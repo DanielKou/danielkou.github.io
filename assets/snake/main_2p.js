@@ -1,27 +1,27 @@
 $(document).ready(function(){
-	//CANVAS INFO
-	var canvas = $("#canvas")[0];
-	var ctx = canvas.getContext("2d");
-	var w = $("#canvas").width();
-	var h = $("#canvas").height();
+  //CANVAS INFO
+  var canvas = $("#canvas")[0];
+  var ctx = canvas.getContext("2d");
+  var w = $("#canvas").width();
+  var h = $("#canvas").height();
   var d_queue1;
   var d_queue2;
   
-	var cw = 10;     //cell width
+  var cw = 10;     //cell width
   var d1;
   var d2;
   var food;
   var score1;
   var score2;
   
-	//PaAINT CANVAS
-	ctx.fillStyle = "white";
-	ctx.fillRect(0, 0, w, h);
-	ctx.strokeStyle = "black";
-	ctx.strokeRect(0, 0, w, h);
-	
-	
-	var snake_array1;
+  //PaAINT CANVAS
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, w, h);
+  ctx.strokeStyle = "black";
+  ctx.strokeRect(0, 0, w, h);
+  
+  
+  var snake_array1;
   var snake_array2;
   
   function init(){
@@ -38,16 +38,16 @@ $(document).ready(function(){
     if (typeof game_loop != "undefined") clearInterval(game_loop);
       game_loop = setInterval(paint, 60); 
   }
-	init();
-	
-	function create_snake1()
-	{
-		var length = 5; 
-		snake_array1 = []; 
-		for(var i = length-1; i>=0; i--){
-		  snake_array1.push({x:i, y:0});
-		}
-	}
+  init();
+  
+  function create_snake1()
+  {
+    var length = 5; 
+    snake_array1 = []; 
+    for(var i = length-1; i>=0; i--){
+      snake_array1.push({x:i, y:0});
+    }
+  }
   
   function create_snake2()
   {
@@ -64,12 +64,12 @@ $(document).ready(function(){
             y: Math.round(Math.random()*(h-cw)/cw)};
   }
   
-	
-	
-	function paint()
-	{
+  
+  
+  function paint()
+  {
     ctx.fillStyle = "white";
-	  ctx.fillRect(0, 0, w, h);
+    ctx.fillRect(0, 0, w, h);
     ctx.strokeStyle = "black";
     ctx.strokeRect(0, 0, w, h);
     
@@ -78,10 +78,10 @@ $(document).ready(function(){
     gamePlay(snake_array2, d2, 2, d_queue2.shift());
       
 
-		for(var i = 0; i < snake_array1.length; i++){
-			var c = snake_array1[i];
-			paint_cell(c.x, c.y, "blue");
-		}
+    for(var i = 0; i < snake_array1.length; i++){
+      var c = snake_array1[i];
+      paint_cell(c.x, c.y, "blue");
+    }
 
     for(var i = 0; i < snake_array2.length; i++){
       var c = snake_array2[i];
@@ -94,7 +94,7 @@ $(document).ready(function(){
     var score2_text = "Player 2 score: " + score2;
     ctx.fillText(score1_text, 5, h-5);
     ctx.fillText(score2_text, 370, h-5);
-	}
+  }
     
   
   function gamePlay(array, d, player, change_d){
@@ -183,14 +183,18 @@ $(document).ready(function(){
   
     //SNAKE MOVEMENT LISTENER
   $(document).keydown(function(e){
-	   var key = e.which;
+     var key = e.which;
 
-     if (key >= "37" && key<= "40") d_queue1.push(key);
-     else if (key == "65") d_queue2.push(key);
-     else if (key == "87") d_queue2.push(key);
-     else if (key == "68") d_queue2.push(key);
-     else if (key == "83") d_queue2.push(key);
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+      e.preventDefault();
+    }
+
+    if (key >= "37" && key<= "40") d_queue1.push(key);
+    else if (key == "65") d_queue2.push(key);
+    else if (key == "87") d_queue2.push(key);
+    else if (key == "68") d_queue2.push(key);
+    else if (key == "83") d_queue2.push(key);
     
-	   
-	})
+     
+  })
 })
