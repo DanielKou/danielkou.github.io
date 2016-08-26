@@ -32,10 +32,10 @@ body{
   background-image: url(mainPagePics/background.jpg);
   height: 600px;
   background-repeat: no-repeat;
-  background-size: cover;    
+  background-size: cover;
   overflow: hidden;
   padding: 80px 50px 50px;
-  
+
 }
 
 .jumbotron .container {
@@ -45,7 +45,7 @@ body{
 
 .jumbotron h1 {
   color: #fff;
-  font-size:72px;  
+  font-size:72px;
   font-family: 'Shift', sans-serif;
   font-weight: bold;
 }
@@ -65,7 +65,7 @@ body{
 }
 
 #about p{
-  font-size: 18px; 
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -123,7 +123,7 @@ body{
 }
 
 #bird{
-   height: 300px; 
+   height: 300px;
 }
 
 #resume img {
@@ -142,4 +142,3 @@ footer {
 .contact-me {
   padding-right: 20px;
 }
-
