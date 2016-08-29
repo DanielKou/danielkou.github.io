@@ -1,7 +1,7 @@
 var caption = '';
 var captionLength = 0;
 var NOUN, prevNOUN;
-var words = ['programmer', 'student', 'web designer',
+var words = ['programmer', 'student', 'web developer',
                'coder', 'software engineer', 'computer scientist',
                'problem solver', 'hard worker', 'team player'];
 
@@ -35,7 +35,7 @@ function addNoun(){
   do { //so same word ins't generated twice in a row
     rand = Math.floor((Math.random() * 100) % 9);
   }while(words[rand] == prevNOUN);
-  caption = words[rand];
+  caption = words[rand] + '.';
   add();
 }
 
@@ -48,7 +48,7 @@ function add(){
   else{
     caption = '';
     captionLength = 0;
-    setTimeout(deleteNoun, 2500);
+    setTimeout(deleteNoun, 1500);
   }
 }
 
@@ -87,7 +87,7 @@ var eeCount = 2;
 var main = function(){
   setInterval(blinkCursor, 1000);
   NOUN = $('#noun');
-  setTimeout(deleteNoun, 2500);
+  setTimeout(deleteNoun, 250);
   
   $('.collapsible').collapsible();
   $('.materialboxed').materialbox();
